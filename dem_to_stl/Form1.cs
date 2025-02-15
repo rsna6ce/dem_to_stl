@@ -34,6 +34,11 @@ namespace dem_to_stl
                 MessageBox.Show("file \"" + inputBitmapPath + "\"\n not found", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (outputStlPath == "")
+            {
+                MessageBox.Show("set output filename.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Cursor.Current = Cursors.WaitCursor;
             ProcessBitmap(inputBitmapPath, outputStlPath);
